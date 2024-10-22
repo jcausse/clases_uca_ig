@@ -8,14 +8,22 @@ Para solicitar clases, podés contactarme via [mail](mailto:juanignaciocausse@gm
 * Mail: juanignaciocausse@gmail.com
 * WhatsApp: 11-5178-8155
 
-
-# Disclaimer
+# Disclaimer (ES)
 Este repositorio contiene algunos apuntes teóricos de mi autoría, y ejercicios resueltos de guías de Informática General de la UCA - Buenos Aires.
 
-Los mismos fueron resueltos en vivo, en clases **particulares** impartidas a alumnos que han querido compartir con la comunidad los archivos generados durante las mismas. **No estoy asociado a la cátedra**.
+Los mismos fueron resueltos en vivo, en **clases particulares** impartidas a alumnos que han querido compartir con la comunidad los archivos generados durante las mismas. **No estoy asociado a la cátedra**.
 
-**Los distintos programas aquí expuestos, así como las _features_ de Python utilizadas, se ajustan a los criterios y restricciones impuestos por la cátedra
+Los distintos programas aquí expuestos, así como las _features_ de Python utilizadas, se ajustan a los criterios y restricciones impuestos por la cátedra
 Informática General de la UCA, por lo que, si bien algunas soluciones pueden mejorarse utilizando características de Python más avanzadas, no se hace uso de 
-las mismas para cumplir con los mencionados requisitos. Es por esto que el presente repositorio NO pretende:**
-* **ser compatible con materias de Python de otras universidades.**
-* **ser parte de un _portfolio_ personal.**
+las mismas para cumplir con los mencionados requisitos. Es por esto que el presente repositorio NO pretende:
+* Ser compatible con materias de Python de otras universidades.
+* Ser parte de un _portfolio_ personal.
+
+# Disclaimer (EN)
+This repository contains some theoretical notes authored by me, as well as solved exercises from the General Informatics course guides at UCA - Buenos Aires.
+
+These exercises were solved live, during private lessons given to students who have chosen to share the files generated during the sessions with the community. I am not affiliated with the course.
+
+The various programs presented here, as well as the Python features used, adhere to the criteria and restrictions imposed by the General Informatics course at UCA. Therefore, while some solutions could be improved using more advanced Python features, these are not used in order to meet the stated requirements. For this reason, this repository does NOT intend to:
+* Be compatible with Python courses from other universities.
+* Be part of a personal portfolio.
