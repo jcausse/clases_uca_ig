@@ -3,6 +3,12 @@
 </p>
 <h1 align="center">Informática General</h1>
 
+# Solicitar Clases
+Para solicitar clases, podés contactarme via [mail](mailto:juanignaciocausse@gmail.com) o [WhatsApp](https://wa.me/541151788155).
+* Mail: juanignaciocausse@gmail.com
+* WhatsApp: 11-5178-8155
+
+
 # Disclaimer
 Este repositorio contiene algunos apuntes teóricos de mi autoría, y ejercicios resueltos de guías de Informática General de la UCA - Buenos Aires.
 
@@ -10,9 +16,6 @@ Los mismos fueron resueltos en vivo, en clases **particulares** impartidas a alu
 
 **Los distintos programas aquí expuestos, así como las _features_ de Python utilizadas, se ajustan a los criterios y restricciones impuestos por la cátedra
 Informática General de la UCA, por lo que, si bien algunas soluciones pueden mejorarse utilizando características de Python más avanzadas, no se hace uso de 
-las mismas para cumplir con los mencionados requisitos**.
-
-# Solicitar Clases
-Para solicitar clases, podés contactarme via [mail](mailto:juanignaciocausse@gmail.com) o [WhatsApp](https://wa.me/541151788155).
-* Mail: juanignaciocausse@gmail.com
-* WhatsApp: 11-5178-8155
+las mismas para cumplir con los mencionados requisitos. Es por esto que el presente repositorio NO pretende:**
+* **ser compatible con materias de Python de otras universidades.**
+* **ser parte de un _portfolio_ personal.**
