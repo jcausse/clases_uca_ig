@@ -53,7 +53,7 @@ for elem in lst:    # Toma los elementos, uno por uno, y los guarda en la variab
 conjunto_lapiceras = [
     {'marca': 'bic', 'tipo': 'roller', 'color': 'violeta'},
     {'marca': 'uniball', 'tipo': 'roller', 'color': 'amarillo'},
-    {'marca': 'parker', 'tipo': 'pluma', 'color': 'auzl'},
+    {'marca': 'parker', 'tipo': 'pluma', 'color': 'azul'},
     {'marca': 'abcd', 'tipo': 'tipo 1', 'color': 'verde'}
 ]
 
