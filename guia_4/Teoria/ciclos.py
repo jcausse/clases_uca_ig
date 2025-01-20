@@ -119,6 +119,15 @@ for i in range(15, 10):
 
 # Ejemplo:
 """
+# Como START = STOP, se genera también una secuencia vacía. No imprime nada.
+# Es como querer imprimir los números empezando por el 10, terminando en 10,
+# y sin incluir el 10.
+for i in range(10, 10):
+    print('{} '.format(i), end='')
+"""
+
+# Ejemplo:
+"""
 # Imprime:
 # 1 4 7 10 13 16 19 22 25 28 31 34 37 40 43 46 49 52 55 58 61 64 67
 for i in range(1, 70, 3): # 3 es el STEP. Cuenta de 3 en 3.
