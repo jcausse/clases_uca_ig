@@ -154,7 +154,7 @@ print()
 # * No tenemos forma de conocer cuantas veces se va a ejecutar el ciclo (no podemos predecir
 #   cuantas veces puede equivocarse el usuario).
 """
-def get_even_number():
+def get_positive_even_number():
     done = False        # Flag de que el ingreso es valido
     while not done:     # Mientras el flag no este en True
         num = int(input('Ingrese un numero par positivo: '))
@@ -166,7 +166,7 @@ def get_even_number():
 
     return num  # El ciclo while anterior me ASEGURA que, si llego hasta aca, "num" es valido
 
-x = get_even_number()
+x = get_positive_even_number()
 print(x)
 """
 
