@@ -5,11 +5,17 @@
 # Las estructuras de repeticion (ciclos) son estructuras que permiten ejecutar un mismo bloque
 # de codigo (su CUERPO) multiples veces, segun:
 # * El valor de una condicion, que se comprobara antes de iniciar cada ciclo para determinar
-#   si se debe o no realizar una nueva iteracion. Cuando la condicion es evaluad como True,
-#   el cuerpo del ciclo vuelve a ejecutarse. Si no, se saltea. => Ciclos "while"
+#   si se debe o no realizar una nueva iteracion. Cuando la condicion es evaluada como True,
+#   el cuerpo del ciclo vuelve a ejecutarse. Si no, se saltea el ciclo, y se sigue ejecutando 
+#   lo que viene debajo. => Ciclos "while".
 # * Un elemento iterable (es decir, algun tipo de dato que tenga sub-elementos dentro, y que para
 #   cada uno de sus sub-elementos se pueda realizar una serie de operaciones) => Ciclos "for".
-#   A los elementos iterables con frecuencia se los suele llamar "secuencias".
+#   A los elementos iterables con frecuencia se los suele llamar "secuencias". Pueden ser, por
+#   ejemplo, listas, tuplas, strings (se iteran caracter a caracter), claves o valores de un 
+#   diccionario, rangos (usando range()), entre otros.
+#   IMPORTANTE: modificar las secuencias (agregar o quitar elementos a una lista, por ejemplo)
+#     mientras las mismas están siendo iteradas es una MUY mala idea (desde el punto de vista de
+#     las buenas prácticas), e incluso puede generar errores de ejecución.
 
 # Como norma general, cuando sabemos de antemano la cantidad de veces que vamos a ejecutar el cuerpo
 # del ciclo (la cantidad de iteraciones a realizar), usamos un ciclo for. Si no conocemos cuantas
@@ -27,8 +33,10 @@
 # Ejemplo: Imprimir todos los caracteres de un string
 """
 string = "Info. Gral. Python UCA"
-for character in string:
-    print(character)
+for c in string:  # En cada iteración, se guarda el siguiente caracter del string en "c"
+    print(c)
+# El ciclo se termina cuando se imprimió el último caracter, y el programa sigue ejecutando
+# lo que venga debajo
 """
 
 # Ejemplo mas avanzado: Imprimir todos los elementos de una lista
