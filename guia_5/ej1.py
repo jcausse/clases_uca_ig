@@ -16,9 +16,10 @@ La función ha retornado una palabra vacía
 """
 
 def ejercicio1(palabra):
-    if len(palabra) < 2:
-        return ''
-    return palabra[-2:] * 3 # palabra[-2:] son los últimos 2 caracteres de la palabra. * 3 repite esos 2 caracteres 3 veces.
+    res = ''
+    if len(palabra) >= 2:
+        res = palabra[-2:] * 3 # palabra[-2:] son los últimos 2 caracteres de la palabra. * 3 repite esos 2 caracteres 3 veces.
+    return res
 
 def main():
     palabra = input('Ingrese una palabra: ')
