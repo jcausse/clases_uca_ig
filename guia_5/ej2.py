@@ -22,13 +22,14 @@ La función ha retornado una palabra vacía
 """
 
 def ejercicio2(extremos, palabra):
-    if len(extremos) != 2 or palabra == '':     # Aca verifique que el string de extremos tenga 2 caracteres  
-        return ''
-    return extremos[0] + palabra + extremos[1]  # Aca, hacer extremos[0] y extremos[1] es seguro, pues si el string no tuviera
-                                                # 2 caracteres habría retornado '' en la línea anterior. Esta verificación siempre
-                                                # es buena, porque sino, acceder a un elemento fuera de rango causaría un error.
-                                                # Notar que extremos[0] NO ES UN SLICE, sino que accede al primer caracter del string.
-                                                # El acceso a índices inválidos SI genera errores (IndexError), no así los slices.
+    res = ''
+    if not(len(extremos) != 2 or palabra == ''):     # Aca verifique que el string de extremos tenga 2 caracteres  
+        res = extremos[0] + palabra + extremos[1]    # Aca, hacer extremos[0] y extremos[1] es seguro, pues si el string no tuviera
+                                                     # 2 caracteres habría retornado '' en la línea anterior. Esta verificación siempre
+                                                     # es buena, porque sino, acceder a un elemento fuera de rango causaría un error.
+                                                     # Notar que extremos[0] NO ES UN SLICE, sino que accede al primer caracter del string.
+                                                     # El acceso a índices inválidos SI genera errores (IndexError), no así los slices.
+    return res
     
 def main():
     extremos = input('Ingrese los extremos: ')
