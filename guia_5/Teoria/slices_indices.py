@@ -1,3 +1,25 @@
+###############
+### ÍNDICES ###
+###############
+
+# Los índices son números enteros que permiten acceder a un elemento determinado de una secuencia. Sirven tanto para strings como para
+# listas y tuplas (Unidad 6). Van entre corchetes [].
+
+# Un string es una secuencia que se itera por sus caracteres, de manera tal que, al acceder mediante un índice a una posición determinada,
+# se está accediendo a aquel caracter que ocupa esa posición en el string.
+
+# Los índices, como en toda secuencia, van:
+# * De 0 a len(secuencia) - 1 para recorridos de izquierda a derecha
+#   EJEMPLO: en 'hola, buen dia', el índice 7 es el del octavo caracter desde la izquierda (la letra 'u').
+# * De -1 a -len(secuencia) para recorridos de derecha a izquierda (en orden inverso).
+#   EJEMPLO: en 'hola, buen dia', el índice -5 es el del cuarto caracter desde la derecha (la letra 'n').
+
+# Solicitar un elemento de un índice fuera de estos rangos generará un error "IndexError". Por ejemplo:
+"""
+s = 'hola'      # len('hola') = 4, por lo que los índices van de 0 a 3 (-->) o de -1 a -4 (<--).
+print(s[4])     # IndexError: string index out of range
+"""
+
 ##############
 ### SLICES ###
 ##############
@@ -12,11 +34,12 @@
 # Un slice se compone de: [inicio:fin:paso]
 # * inicio: Es el índice de inicio de la partición. Todos los elementos desde este índice en adelante son tomados
 #           al momento de generar la partición. El inicio puede omitirse (siempre poniendo los dos puntos, pero
-#           ignorando el número que va en ese lugar), en cuyo caso se asume que es 0.
+#           ignorando el número que va en ese lugar), en cuyo caso se asume que es 0 para pasos positivos, o -1 para pasos negativos.
 # * fin: Es el índice de fin de la partición. Indica el elemento hasta el cual llegará la partición. Es importante
 #        tener en cuenta que el elemento final no es incluído en la partición (llega hasta el elemento anterior).
-#        El final también puede omitirse, en cuyo caso se asume que es el último elemento del iterable. Al igual que
-#        en el inicio, se agregan los dos puntos, pero no se pone el número que va en el lugar del fin.
+#        El final también puede omitirse, en cuyo caso se asume que es el último elemento del iterable (para pasos positivos), o el
+#        primero (para pasos negativos). Al igual que en el inicio, se agregan los dos puntos, pero no se pone el número que va en el 
+#        lugar del fin.
 # * paso: Es el salto que se da entre los índices de inicio y fin. También puede omitirse. En este caso, no es necesario
 #        poner los dos puntos, y se asume que el paso es 1 si el mismo se omite.
 
@@ -48,6 +71,7 @@ print(string[0:8:2])    # "Hl u"
 print(string[0:9:2])    # "Hl ud"
 print(string[5:5])      # "" (desde 5, hasta 5, sin incluir el 5)
 print(string[5:2])      # "" (inicio mayor que fin, no incluye nada)
+print(string[3:180])    # "a Mundo" (al pasarse de rango no genera error, solo llega hasta donde puede)
 print("--------------------------------------\n")
 
 print("Ejemplos omitiendo inicio:")
