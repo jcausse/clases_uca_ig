@@ -2,6 +2,7 @@
   <img src="https://uca.edu.ar/assets/img/logo.png" />
 </p>
 <h1 align="center">Informática General</h1>
+<p align="center"><a href="https://github.com/jcausse/clases_uca_ig/archive/refs/heads/main.zip">Descargar</a></p>
 
 # Solicitar Clases
 Para solicitar clases, podés contactarme via [mail](mailto:juanignaciocausse@gmail.com) o [WhatsApp](https://wa.me/541151788155).
