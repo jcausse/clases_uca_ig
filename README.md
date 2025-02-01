@@ -15,7 +15,7 @@ Para solicitar clases, podés contactarme via [mail](mailto:juanignaciocausse@gm
 * [**Unidad 4:**](https://github.com/jcausse/clases_uca_ig/tree/main/unidad_4) Ciclos.
 * [**Unidad 5:**](https://github.com/jcausse/clases_uca_ig/tree/main/unidad_5) Cadenas de caracteres.
 * [**Unidad 6:**](https://github.com/jcausse/clases_uca_ig/tree/main/unidad_6) Colecciones.
-* [**Unidad:**](https://github.com/jcausse/clases_uca_ig/tree/main/unidad_7) Archivos.
+* [**Unidad 7:**](https://github.com/jcausse/clases_uca_ig/tree/main/unidad_7) Archivos.
 * [**Info:**](https://github.com/jcausse/clases_uca_ig/tree/main/info) Carpeta donde encontrarán distinta información relevante sobre la materia, así como algunos apuntes útiles.
 
 # Disclaimer
