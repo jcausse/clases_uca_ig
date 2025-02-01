@@ -8,6 +8,9 @@ Para solicitar clases, podés contactarme via [mail](mailto:juanignaciocausse@gm
 * Mail: juanignaciocausse@gmail.com
 * WhatsApp: 11-5178-8155
 
+<details>
+<summary> Disclaimer </summary>
+
 # Disclaimer (ES)
 Este repositorio contiene algunos apuntes teóricos de mi autoría, y ejercicios resueltos de guías de Informática General de la UCA - Buenos Aires.
 
@@ -27,3 +30,16 @@ These exercises were solved live, during private lessons given to students who h
 The various programs presented here, as well as the Python features used, adhere to the criteria and restrictions imposed by the General Informatics course at UCA. Therefore, while some solutions could be improved using more advanced Python features, these are not used in order to meet the stated requirements. For this reason, this repository does NOT intend to:
 * Be compatible with Python courses from other universities.
 * Be part of a personal portfolio.
+
+</details>
+
+# Contenidos
+* **UNIDAD 1:** Entrada y Salida. Variables y Operadores.
+* **UNIDAD 2:** Funciones.
+* **UNIDAD 3:** Condicionales.
+* **UNIDAD 4:** Ciclos.
+* **UNIDAD 5:** Cadenas de caracteres.
+* **UNIDAD 6:** Colecciones.
+* **UNIDAD 7:** Archivos.
+* **INFO:** Carpeta donde encontrarán distinta información relevante sobre la materia, así como algunos apuntes útiles.
+
