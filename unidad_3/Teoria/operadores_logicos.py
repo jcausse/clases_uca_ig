@@ -149,3 +149,81 @@ print(resultado)
 ### Imprime:
 # True
 print('--------------------')
+
+### Utilidad ###
+
+# Supongamos que queremos determinar si un número a es divisible por otro número b.
+# Si resultado de la operación a % b es cero, entonces a es divisible por b.
+# Esto tiene un problema: si b es cero, a % b será a % 0, lo cual provocará un error.
+"""
+a = 9
+print(a % 3)        # Imprime 0 (9 es divisible por 3)
+print(a % 4)        # Imprime 1 (9 no es divisible por 4)
+print(a % 0)        # No imprime nada, y da error: ZeroDivisionError: integer modulo by zero
+"""
+
+# Esto lo puedo solucionar de la siguiente manera:
+# b != 0 and a % b == 0
+
+# La primera condición (b != 0) sólo sera verdadera si b no es cero. En ese caso, como la primera condición es verdadera, esto no alcanza
+# para determinar el resultado final de la and, por lo que la segunda condición (a % b == 0) debe evaluarse:
+# * Supongamos que a es 9 y b es 3. En este caso, el resultado de a % b será cero. Luego, la comparación por igualdad (a % b == 0) equivale
+#   a comparar (0 == 0) (pues el primer cero es el resultado de a % b). Esta comparación dará True, que es el resultado de la segunda condición
+#   Finalmente:
+#   * b != 0 es True
+#   * a % b == 0 es True
+#   * True and True es True, indicando que 9 es divisible por 3
+# * Supongamos que a es 10 y b es 3. En este caso, el resultado de a % b será 1. Luego, la comparación por igualdad (a % b == 1) equivale
+#   a comparar (1 == 0). Esta comparación dará False, que es el resultado de la segunda condición
+#   Finalmente:
+#   * b != 0 es True
+#   * a % b == 0 es False
+#   * True and False es False, indicando que 10 NO es divisible por 3
+
+# En caso de que b fuera cero, la primera condición (b != 0) dará False (porque b es efectivamente 0). Debido a que el operador and es lazy,
+# y a que la primera condición es falsa, el resultado de la and es falso, independientemente del resultado de la segunda condición (a % b == 0).
+# Por esto, dicha segunda condición nunca se evalúa, evitando hacer la división por cero.
+
+# Ver que es esencial que b != 0 sea la primera de las condiciones. Esto es porque necesitamos que se verifique primero que b no es cero para 
+# solo hacer el módulo en ese caso. Si invertimos las condiciones, la expresión deja de funcionar correctamente.
+
+a = 9
+b = 3
+print(b != 0 and a % b == 0) # True
+
+a = 10
+b = 3
+print(b != 0 and a % b == 0) # False
+
+a = 9
+b = 0
+print(b != 0 and a % b == 0) # False (sin dar ningún error)
+"""
+# NOTA: Las condiciones NO son intercambiables
+print(a % b == 0 and b != 0) # Error: ZeroDivisionError: integer modulo by zero
+"""
+
+print('--------------------')
+
+# Hecho función, podemos implementar esta condición en el siguiente programa:
+
+def es_divisible(a, b):
+    return b != 0 and a % b == 0    # Devolverá True o False, según se evalúe la condición como vimos antes
+
+def main():
+    a = int(input('Ingrese un número:   '))
+    b = int(input('Ingrese otro número: '))
+    if es_divisible(a, b):          # Si la función devuelve True, a es divisible por b
+        print('{} es divisible por {}'.format(a, b))
+    else:                           # En caso contrario, no lo es
+        print('{} NO es divisible por {}'.format(a, b))
+
+main()
+
+# Notar que este programa soporta que b sea cero, sin dar errores:
+"""
+Ingrese un número:   5
+Ingrese otro número: 0
+5 NO es divisible por 0
+"""
+
