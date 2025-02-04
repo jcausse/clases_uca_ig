@@ -34,6 +34,8 @@ def es_letra(c):
 
 def primera_palabra(texto):
     """
+    DIAGRAMA DE FLUJO DE ESTA FUNCION: https://github.com/jcausse/clases_uca_ig/blob/main/unidad_5/ej4_primera_palabra.png
+    
     Dado un texto, obtiene la primera PALABRA del mismo.
     """
     indice_inicio = 0               # Aca voy a guardar el primer caracter que ES una letra
