@@ -166,14 +166,45 @@ def bubblesort(lst):
                                                     
         for j in range(0, len(lst) - i - 1):        # j dicta que par de elementos tomar. Se toma el j-esimo y su siguiente.
                                                     # Tiene un -i pues i lo que indica es la cantidad de elementos a ignorar desde el
-                                                    # final (aquellos que estan fijos)
+                                                    # final (aquellos que estan fijos). En cada pasada, se ignora un elemento más.
                                                     # Tiene un -1 porque se toman un elemento y su siguiente. Si no se pone el -1, se
-                                                    # podria llegar a tomar el ultimo elemento (que no tiene siguiente) y dar error
+                                                    # podria llegar a tomar el ultimo elemento (que no tiene siguiente) y dar error.
             
             if lst[j] > lst[j + 1]:                 # Si para un par de elementos, el j-esimo es mayor que su siguiente (j + 1)-esimo
                 aux = lst[j]                        # Los elementos se intercambian (de la misma forma que se ve en el ejercicio 4)
                 lst[j] = lst[j + 1]                 # Ver: https://github.com/jcausse/clases_uca_ig/blob/main/unidad_6/ej4.py
                 lst[j + 1] = aux
+"""
+
+
+#############################################
+### Ordenamiento ascendente y descendente ###
+#############################################
+
+# Notar que la siguiente línea del bubblesort:
+"""
+if lst[j] > lst[j + 1]:
+"""
+# Controla los swaps (los intercambios) entre elementos consecutivos.
+# La idea de esta línea es que si un elemento es mayor que su siguiente, ese par de elementos se intercambien
+# de manera que los mayores siempre queden a la derecha.
+# Al terminar de correr todo el algoritmo, los números mayores siempre se habrán desplazado a la derecha, por lo que
+# el orden de la lista será de menor a mayor (orden ascendente).
+
+# De forma análoga, si logramos que los intercambios se den cuando el elemento anterior es menor que el elemento siguiente,
+# lo que sucederá es que los elementos menores quedarán a la derecha, por lo que, al terminar el algoritmo, la lista quedará
+# ordenada de mayor a menor (orden descendente).
+
+# Entonces, lo único que debemos cambiar para alterar el orden de ordenamiento es el signo de la comparación:
+
+# PARA ORDEN ASCENDENTE: intercambiar si el anterior es mayor al siguiente:
+"""
+if lst[j] > lst[j + 1]:
+"""
+
+# PARA ORDEN DESCENDENTE: intercambiar si el anterior es menor al siguiente:
+"""
+if lst[j] < lst[j + 1]:
 """
 
 
