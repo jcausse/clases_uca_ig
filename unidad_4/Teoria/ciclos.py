@@ -26,7 +26,7 @@
 ### Ciclos for / for-in ###
 ###########################
 
-# En Python, cuando queremos realizar una operacion multiples veces sobre los elementos de un 
+# En Python, cuando queremos realizar una operacion multiples veces sobre los sub-elementos de un 
 # iterable (lista, string, tupla, claves o valores de un diccionario, etc.), generalmente usamos 
 # un ciclo for.
 
@@ -72,8 +72,8 @@ for lapicera in conjunto_lapiceras:
 ### Funcion range() ###
 #######################
 
-# La funcion range genera una secuencia de numeros enteros, contiguos (seguidos), muy similar a 
-# una lista, con todos los numeros enteros entre dos valores que recibe como parametros.
+# La funcion range genera una secuencia de numeros enteros, contiguos (seguidos), con todos los 
+# numeros entre dos valores que recibe como parametros, incluyendo el de inicio, pero sin incluir el de final.
 """
 range(START, STOP, STEP)
 
@@ -85,11 +85,11 @@ range(STOP)
 # START: es el valor inicial (que puede ser omitido). Este valor sera INCLUIDO en la secuencia.
 #        En caso de que este valor sea omitido, el unico parametro que recibe range es el STOP, y
 #        se toma el valor por default (predeterminado) de START: 0.
-# STOP: es el valor final (que NO puede ser omitido). Este valor sera EXCLUIDO de la secuencia, por
-#       lo que el ultimo valor de la secuencia sera STOP - 1.
+# STOP: es el valor final (que NO puede ser omitido). Este valor será EXCLUÍDO de la secuencia, por
+#       lo que el ultimo valor de la secuencia será STOP - 1.
 
-# range() tambien soporta un ultimo parametro STEP, que indica de cuanto en cuanto generar la
-# secuencia. Los numeros de la secuencia ya no serian contiguos, sino que tendrian una separacion.
+# range() también soporta un último parámetro STEP, que indica de cuánto en cuánto generar la
+# secuencia. Los números de la secuencia ya no serían contiguos, sino que tendrían una separación.
 # El STEP predeterminado es 1 (cuenta de 1 en 1: 1, 2, 3, ...).
 
 # Ejemplo:
@@ -134,6 +134,13 @@ for i in range(1, 70, 3): # 3 es el STEP. Cuenta de 3 en 3.
     print('{} '.format(i), end='')
 print()
 """
+
+# NOTA:
+# Si imprimimos un range usando print(), veremos que no se muestra la secuencia completa de números. Esto es porque,
+# si bien es útil entender que range() genera algo similar a una lista, no es en realidad tal cosa, sino otro tipo de objeto
+# (que no veremos) que se llama iterador.
+# Sucede que los range() están preparados, en principio, para ser recorridos usando un ciclo for, de manera que el for pueda
+# obtener cada uno de sus sub-elementos y tomar acciones utilizando cada uno de ellos.
 
 ####################
 ### Ciclos while ###
