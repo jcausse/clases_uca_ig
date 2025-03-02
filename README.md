@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/jcausse/clases_uca_ig/blob/main/.other/uca_logo.png?raw=true" />
+  <img src="https://github.com/jcausse/clases_uca_ig/blob/main/.other/uca_logo.png?raw=true" height="80"/>
 </p>
 <h1 align="center">Informática General</h1>
 <p align="center"><a href="https://github.com/jcausse/clases_uca_ig/archive/refs/heads/main.zip">Descargar</a></p>
