@@ -14,6 +14,25 @@ Si me quiero quedar con el digito N de un numero:
 dig_N = (num // (10 ** N)) % 10
 """
 
+##################
+### SIN EXTRAS ###
+##################
+
+num = int(input('Ingrese un numero de al menos 3 cifras, con cantidad impar de cifras: '))
+num_digits = len(str(num)) # Numero impar
+
+menos_significativo = (num % (10 ** 1)) // (10 ** 0)
+mas_significativo = (num % (10 ** num_digits)) // (10 ** (num_digits - 1))
+digito_medio = (num % (10 ** (num_digits // 2 + 1))) // (10 ** (num_digits // 2))
+
+print('El primer digito es:', mas_significativo)
+print('El digito del medio es:', digito_medio)
+print('El ultimo digito es:', menos_significativo)
+
+##################
+### CON EXTRAS ###
+##################
+"""
 ######################################
 # Extra 2: funcion que calcula y
 # devuelve una cifra determinada de
@@ -49,3 +68,4 @@ else:
     print('Digito mas significativo: ', mas_sig)
     print('Digito del medio: ', medio)
     print('Digito menos significativo: ', menos_sig)
+"""
