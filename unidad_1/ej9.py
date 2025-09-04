@@ -59,7 +59,7 @@ else:
     #medio       = (num // (10 ** (num_digits // 2))) % 10
     #menos_sig   = (num // (10 ** 0)) % 10
 
-    # Con funciones:
+    # Con funciones (practica 2):
     mas_sig     = get_num_digit(num, num_digits - 1)
     medio       = get_num_digit(num, num_digits // 2)
     menos_sig   = get_num_digit(num, 0)
