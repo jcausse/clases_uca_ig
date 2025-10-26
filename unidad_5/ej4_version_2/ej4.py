@@ -34,7 +34,7 @@ def es_letra(c):
 
 def primera_palabra(texto):
     """
-    DIAGRAMA DE FLUJO DE ESTA FUNCION: https://github.com/jcausse/clases_uca_ig/blob/main/unidad_5/ej4_primera_palabra.png
+    DIAGRAMA DE FLUJO DE ESTA FUNCION: https://github.com/jcausse/clases_uca_ig/blob/main/unidad_5/ej4_version_2/ej4_primera_palabra.png
     
     Dado un texto, obtiene la primera PALABRA del mismo.
     """
@@ -158,10 +158,10 @@ def caracter_a_minuscula(caracter):
     caracter_a_minuscula('_')   devuelve '_'
     caracter_a_minuscula('T')   devuelve 't'
     """
-    if 'A' <= caracter <= 'Z':  # Si es una mayuscula
-        res = chr(ord(caracter) + 32)       # Lo convierto
-    else:                       # Si ya es minuscula (o es cualquier otro simbolo)
-        res = caracter                      # Lo dejo como esta
+    if 'A' <= caracter and caracter <= 'Z':  # Si es una mayuscula
+        res = chr(ord(caracter) + 32)           # Lo convierto
+    else:                                   # Si ya es minuscula (o es cualquier otro simbolo)
+        res = caracter                          # Lo dejo como esta
     return res
 
 """
