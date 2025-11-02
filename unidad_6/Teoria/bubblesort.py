@@ -1,5 +1,8 @@
 # https://es.wikipedia.org/wiki/Ordenamiento_de_burbuja
 
+# ANIMACION:
+# https://www.youtube.com/watch?v=9I2oOAr2okY
+
 
 ########################################################
 ### Bubble Sort / BBSort / Ordenamiento por burbujeo ###
