@@ -11,7 +11,7 @@
  -        +----
    20        5
   ----
-     2
+    2
 """
 # en Informatica, cuando usamos el operador modulo, estamos dividiendo el numero de la izquierda por el de la derecha,
 # lo que produce un cociente y un resto, que siempre cumple:
