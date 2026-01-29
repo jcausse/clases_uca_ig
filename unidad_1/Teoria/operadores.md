@@ -140,9 +140,7 @@ El código de arriba imprime `9`.
 
 ## Operador `%`
 
-Ver el archivo dedicado.
-
-`https://github.com/jcausse/clases_uca_ig/blob/main/unidad_1/Teoria/modulo(porcentaje).py`
+[Ver el archivo dedicado](https://github.com/jcausse/clases_uca_ig/blob/main/unidad_1/Teoria/modulo(porcentaje).py).
 
 ## Operador `=`
 
@@ -204,6 +202,4 @@ Supongamos que `x = 2`. Si `x *= 5 + 2` fuese equivalente a `x = x * 5 + 2`, el 
 
 ## Operadores lógicos (`and`, `or` y `not`)
 
-Ver el archivo dedicado.
-
-`https://github.com/jcausse/clases_uca_ig/blob/main/unidad_3/Teoria/operadores_logicos.py`
+[Ver el archivo dedicado](https://github.com/jcausse/clases_uca_ig/blob/main/unidad_3/Teoria/operadores_logicos.py).
