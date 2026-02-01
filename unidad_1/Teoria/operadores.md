@@ -140,7 +140,7 @@ El código de arriba imprime `9`.
 
 ## Operador `%`
 
-[Ver el archivo dedicado](https://github.com/jcausse/clases_uca_ig/blob/main/unidad_1/Teoria/modulo(porcentaje).py).
+[Ver el archivo dedicado](https://github.com/jcausse/clases_uca_ig/blob/main/unidad_1/Teoria/modulo(porcentaje).md).
 
 ## Operador `=`
 
