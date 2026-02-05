@@ -13,9 +13,9 @@ un número real e imprimir por pantalla los mensajes retornados por las funcione
 def signo(x):
     if x > 0:
         ret = 'positivo'
-    if x < 0:
+    elif x < 0:
         ret = 'negativo'
-    if x == 0:
+    else:
         ret = 'cero'
     return ret
 
