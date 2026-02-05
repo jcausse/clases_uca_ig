@@ -47,5 +47,8 @@ def parity(byte):
     ones_count += get_bit(byte, 7)
     return ones_count % 2
 
-byte = int(input('Ingrese un numero binario de hasta 8 bits: '))
-print('Bit de paridad:', parity(byte))
+def main():
+    byte = int(input('Ingrese un numero binario de hasta 8 bits: '))
+    print('Bit de paridad:', parity(byte))
+
+main()

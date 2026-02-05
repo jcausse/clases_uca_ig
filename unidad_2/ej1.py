@@ -38,11 +38,13 @@ def area_triangulo(lado1, lado2, lado3):
     p = (lado1 + lado2 + lado3) / 2
     return (p * (p - lado1) * (p - lado2) * (p - lado3)) ** 0.5
 
+def main():
+    lado1 = float(input('Ingrese lado 1: '))
+    lado2 = float(input('Ingrese lado 2: '))
+    lado3 = float(input('Ingrese lado 3: '))
 
-lado1 = float(input('Ingrese lado 1: '))
-lado2 = float(input('Ingrese lado 2: '))
-lado3 = float(input('Ingrese lado 3: '))
+    area = area_triangulo(lado1, lado2, lado3)
 
-area = area_triangulo(lado1, lado2, lado3)
+    print('Area:', area)
 
-print('Area:', area)
+main()

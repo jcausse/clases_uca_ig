@@ -10,9 +10,12 @@ Luego invocar a la función ​raiz ​e informar la raíz calculada.
 def raiz(radicando, indice):
     return radicando ** (1 / indice)
 
-radicando = float(input('Ingrese el radicando (numero real): ')) 
-indice = int(input('Ingrese el índice (numero natural): '))
+def main():
+    radicando = float(input('Ingrese el radicando (numero real): ')) 
+    indice = int(input('Ingrese el índice (numero natural): '))
 
-resultado = raiz(radicando, indice)
+    resultado = raiz(radicando, indice)
  
-print('La raiz de indice', indice, 'de', radicando, 'es =', resultado)
+    print('La raiz de indice', indice, 'de', radicando, 'es =', resultado)
+
+main()
