@@ -90,6 +90,8 @@ file.close()
 
 ## Uso de archivos con with
 
+> **IMPORTANTE**: En Informática General UCA, el uso de `with` no se dicta en clase, y por tanto no está permitido. Esta sección es solo informativa.
+
 El `with` es una estructura de Python que nos permite liberar recursos pedidos de forma automática cuando el bloque de código que contiene termina.
 
 Esto se suele utilizar mucho con archivos ya que permite que el archivo se cierre de forma automática sin nosotros tener que hacer `<variable>.close()` de manera manual.
