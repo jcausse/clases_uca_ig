@@ -4,8 +4,11 @@ Ejercicio 9:
 Desarrollar un programa que solicite al usuario el ingreso de un número natural de una                             
 cantidad impar de cifras (al menos 3 cifras). Luego el programa deberá informar la                           
 cantidad de cifras del número ingresado, la primera y la última cifra del número                           
-ingresado, como así también su cifra central como se muestra a continuación:
+ingresado, como así también su cifra central.
+"""
 
+"""
+IDEA:
 
 NUMERO:     2 3 5 8 9 = 2*(10**4) + 3*(10**3) + 5*(10**2) + 8*(10**1) + 9*(10**0)
 POTENCIA:   4 3 2 1 0
@@ -14,24 +17,34 @@ Si me quiero quedar con el digito N de un numero:
 dig_N = (num // (10 ** N)) % 10
 """
 
-##################
-### SIN EXTRAS ###
-##################
-
+# Ingreso el numero
 num = int(input('Ingrese un numero de al menos 3 cifras, con cantidad impar de cifras: '))
-num_digits = len(str(num)) # Numero impar
 
-menos_significativo = (num % (10 ** 1)) // (10 ** 0)
-mas_significativo = (num % (10 ** num_digits)) // (10 ** (num_digits - 1))
-digito_medio = (num % (10 ** (num_digits // 2 + 1))) // (10 ** (num_digits // 2))
+# Calculo el ultimo digito (menos significativo) (no necesito saber la cantidad)
+ultimo_digito = (num // (10 ** 0)) % 10                     # Es lo mismo que num % 10, solo que uso la formula general
 
-print('El primer digito es:', mas_significativo)
-print('El digito del medio es:', digito_medio)
-print('El ultimo digito es:', menos_significativo)
+# Calcular la cantidad de digitos que tiene el numero, lo cual me va a permitir calcular
+# el digito de la izquierda (el primero) y el del medio. Recordar que la cantidad de digitos es impar.
+cant_digitos = len(str(num))
 
-##################
-### CON EXTRAS ###
-##################
+# Calculo el primer digito (mas significativo)
+primer_digito = (num // (10 ** (cant_digitos - 1))) % 10    # En este caso, el % 10 no hace nada, pero es parte del algoritmo
+
+# Calculo el digito del medio
+digito_central = (num // (10 ** ((cant_digitos - 1) // 2))) % 10
+
+# Imprimo el resultado como se pide
+print('El numero ingresado tiene {} cifras.'.format(cant_digitos))
+print('La primera cifra es {}, la ultima es {} y la central es {}.'.format(primer_digito, ultimo_digito, digito_central))
+
+#########################################################################################################
+
+########################################
+### EXTRAS (usa cosas mas avanzadas) ###
+### No se recomienda leer antes de   ###
+### llegar a la guia 3               ###
+########################################
+
 """
 ######################################
 # Extra 2: funcion que calcula y
