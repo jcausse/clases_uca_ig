@@ -8,7 +8,7 @@ natural”, “entero” o “real”​. El programa principal deberá efectuar
 un número real e imprimir por pantalla los mensajes retornados por las funciones.                        
 """
 
-# DIAGRAMA DE FLUJO DE ESTE EJERCICIO: https://github.com/jcausse/clases_uca_ig/blob/main/unidad_3/ej3.png
+# DIAGRAMA DE FLUJO DE ESTE EJERCICIO: https://github.com/jcausse/clases_uca_ig/blob/main/unidad_3/ej03.png
 
 def signo(x):
     if x > 0:

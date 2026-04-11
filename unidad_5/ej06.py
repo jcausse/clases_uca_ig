@@ -92,7 +92,7 @@ print(preparar_frase('Así Ramona va, no Marisa'))   # 'asiramonavanomarisa'
 
 def es_palindromo(frase):
     """
-    DIAGRAMA DE FLUJO DE ESTA FUNCION: https://github.com/jcausse/clases_uca_ig/blob/main/unidad_5/ej6_es_palindromo.png
+    DIAGRAMA DE FLUJO DE ESTA FUNCION: https://github.com/jcausse/clases_uca_ig/blob/main/unidad_5/ej06_es_palindromo.png
     
     Devuelve True si la frase es palindroma (se lee igual del derecho que del reves), o False en caso contrario.
     
