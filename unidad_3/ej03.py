@@ -2,9 +2,9 @@
 Ejercicio 3:
 
 Desarrollar una función que reciba un número real como parámetro y que retorne un                           
-mensaje si el número es ​“positivo”, “negativo” o “cero”​. Adicionalmente deberá                     
+mensaje si el número es "positivo", "negativo" o "cero". Adicionalmente deberá                     
 desarrollar otra función, que retorne otro mensaje, si el número recibido es ​“entero                         
-natural”, “entero” o “real”​. El programa principal deberá efectuar el ingreso de                       
+natural”, “entero” o "real". El programa principal deberá efectuar el ingreso de                       
 un número real e imprimir por pantalla los mensajes retornados por las funciones.                        
 """
 
