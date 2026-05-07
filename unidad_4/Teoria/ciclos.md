@@ -54,6 +54,13 @@ En Python, cuando queremos realizar una operacion multiples veces sobre los sub-
 
 El ciclo `for` va obteniendo de a uno y **en orden** los elementos internos de un iterable y realizando operaciones para cada uno de ellos.
 
+### Sintaxis
+
+```python
+for <variable> in <iterable>:
+    <cuerpo>
+```
+
 ### Ejemplo: Imprimir todos los caracteres de un _string_
 
 ```python
@@ -97,6 +104,8 @@ for lapicera in conjunto_lapiceras:
     ))
     i += 1
 ```
+
+---
 
 ## Funcion `range()`
 
@@ -172,105 +181,161 @@ print()
 >
 > Sucede que los `range()` están preparados, en principio, para ser recorridos usando un ciclo `for`, de manera que el `for` pueda obtener cada uno de sus sub-elementos y tomar acciones utilizando cada uno de ellos.
 
-####################
-### Ciclos while ###
-####################
+---
 
-# El ciclo while nos permite ejecutar un bloque de codigo, su CUERPO, una cantidad indefinida
-# de veces dependiendo de una CONDICION. Tambien es muy util (igual que for-in-range) cuando
-# queremos realizar iteraciones teniendo en consideracion los indices de una secuencia (lista,
-# tupla, string, etc.)
+## Ciclos `while`
 
-# Ejemplo:
-# Supongamos que queremos pedir a un usuario que ingrese un numero par positivo, y queremos
-# validar el numero ingresado, de manera que si el mismo ingresa un numero impar o un numero
-# negativo, la entrada sea rechazada y se le vuelva a pedir otro numero. Esto no podriamos,
-# en principio, hacerlo con un ciclo for-in, debido a que:
-# * No tenemos un elemento iterable que recorrer, sino que el ciclo que vamos a escribir
-#   estara basado en una CONDICION.
-# * No tenemos forma de conocer cuantas veces se va a ejecutar el ciclo (no podemos predecir
-#   cuantas veces puede equivocarse el usuario).
-"""
+El ciclo `while` nos permite ejecutar un bloque de código, su `cuerpo`, una cantidad indefinida de veces dependiendo de una `condición`. Tambien es muy útil (igual que `for-in-range`) cuando queremos realizar iteraciones (sobre una secuencia) teniendo en consideración los índices de los elementos de la secuencia (lista, tupla, string, etc.). 
+
+Por ejemplo, cuando queremos realizar alguna operación para los elementos de la secuencia, la cual no solamente depende de los elementos en sí, sino también de la posición que ocupan dentro de la secuencia.
+
+Las condiciones de los ciclos `while` suelen tener como complejidad que son proposiciones lógicas compuestas (es decir, son varias condiciones unidas por conectivos lógicos). Por esto se recomienda repasar el uso de los operadores lógicos `and`, `or` y `not`, que pueden encontrarse en [este archivo](https://github.com/jcausse/clases_uca_ig/blob/main/unidad_3/Teoria/operadores_logicos.py).
+
+### Sintaxis
+
+```python
+while <condicion booleana>:
+    <cuerpo>
+```
+
+### Ejemplo:
+
+Supongamos que queremos pedir a un usuario que ingrese un número par positivo, y queremos validar el número ingresado, de manera que si el mismo ingresa un número impar o un número negativo, la entrada sea rechazada y se le vuelva a pedir otro número.
+
+Esto no podríamos, en principio, hacerlo con un ciclo `for-in`, debido a que:
+* No tenemos un elemento iterable que recorrer, sino que el ciclo que vamos a escribir estará basado en una condición.
+* No tenemos forma de conocer cuántas veces se va a ejecutar el ciclo (no podemos predecir cuántas veces puede equivocarse el usuario).
+
+```python
 def get_positive_even_number():
-    done = False        # Flag de que el ingreso es valido
-    while not done:     # Mientras el flag no este en True
+    # Flag de que el ingreso es valido
+    done = False
+
+    # Mientras el flag no este en True        
+    while not done:     
         num = int(input('Ingrese un numero par positivo: '))
-        if num > 0 and num % 2 == 0:    # Si cumple todas las condiciones
-            done = True                 # Marco que la entrada fue valida, lo que hace que
-                                        # pueda salir del ciclo
-        else:                           # Si no cumple ALGUNA de las condiciones (and)
-            print('El numero {} es invalido.'.format(num)) # Muestro un mensaje de error
+        
+        # Si cumple todas las condiciones
+        if num > 0 and num % 2 == 0:
+            # Marco que la entrada fue valida, lo que hace que pueda salir del ciclo
+            done = True
+
+        # Si no cumple ALGUNA de las condiciones (and)
+        else:
+            # Muestro un mensaje de error
+            print('El numero {} es invalido.'.format(num)) 
 
     return num  # El ciclo while anterior me ASEGURA que, si llego hasta aca, "num" es valido
 
 x = get_positive_even_number()
 print(x)
-"""
+```
 
-# Ejemplo:
-# Desarrollar la funcion index(s, c) que devuelva el indice de la primera aparicion del 
-# caracter "c" en el string "s". Si "c" no esta en "s", debera devolver -1.
+### Ejemplo:
 
-# La mejor solucion usando for-in-range es la siguiente:
-"""
+Desarrollar la función `index(s, c)` que devuelva el índice de la primera aparición del caracter `c` en el string `s`. Si `c` no está en `s`, deberá devolver `None`.
+
+La mejor solución usando `for-in-range` es la siguiente:
+
+```python
 def index_ineficiente(s, c):
-    ret = -1
+    ret = None
     found = False
     for i in range(len(s)):
-        # return i  ---> Seria lo ideal, pero no se nos permite usar mas de un return :(
+        # return i  ---> Seria lo ideal, pero
+        # no se nos permite usar mas de un return :(
         if not found and s[i] == c:
             found = True
             ret = i
     return ret
-"""
-# Esto es muy ineficiente, porque una vez encontrada la primera coincidencia de "c" en "s", 
-# sigue recorriendo el string, lo que podria evitarse (retornar justo cuando se encuentra 
-# la primera coincidencia).
-# Recordar que en Informatica General UCA NO PODEMOS:
-# * Usar mas de un return por funcion
-# * Usar break para romper ciclos
-# * Usar continue
-# Debido a estas limitaciones, no hay una forma eficiente y a la vez permitida de resolver este problema
-# usando for. Lo haremos usando while:
-"""
+```
+
+Esto es muy ineficiente, porque una vez encontrada la primera coincidencia de `c` en `s`, sigue recorriendo el string, lo que podría evitarse, retornando justo cuando se encuentra la primera coincidencia.
+
+> **Nota:** Recordar que en Informática General UCA **no está permitido**:
+> * Usar más de un `return` por función.
+> * Usar `break` para romper ciclos.
+> * Usar `continue`.
+
+Debido a estas limitaciones, no hay una forma eficiente y a la vez permitida de resolver este problema usando `for`. Lo haremos usando `while`:
+
+```python
 def index(s, c):
-    i = 0               # Indice para recorrer el string
-    ret = -1            # Valor de retorno (si "c" no esta en "s", "ret = i" no se ejecuta, y devolvemos -1)
-    found = False       # Flag que me permite cortar el ciclo cuando encuentre la primera aparicion de "c" en "s"
+    # Indice para recorrer el string
+    i = 0
+    
+    # Valor de retorno (si "c" no esta en "s", "ret = i" no se ejecuta, y devolvemos None)
+    ret = None
+
+    # Flag que me permite cortar el ciclo cuando encuentre la primera aparicion de "c" en "s"
+    found = False       
+    
+    # El ciclo tiene 2 condiciones que deben cumplirse a la vez (por el and)
+    # * "found" debe ser False (not found). Este es el flag, que al encontrar la aparicion lo
+    #   cambiamos a True, y corta el ciclo poque esta condicion deja de cumplirse.
+    # * i < len(s) para evitar pasarnos de la maxima longitud.
     while not found and i < len(s):
-        if s[i] == c:   # Cuando encuentro la aparicion
-            ret = i     # Me guardo el indice (sobreescribo ret)
+        if s[i] == c:       # Cuando encuentro la aparicion
+            ret = i         # Me guardo el indice (sobreescribo ret)
             found = True    # Seteo el flag
         i += 1
-    return ret          # Devuelve el indice (si ret fue sobreescrito), o -1
+    return ret          # Devuelve el indice (si ret fue sobreescrito), o None
 
 print(index('hola', 'l'))                   # 2
 print(index('hola buenos dias ', ' '))      # 4
-print(index('buenos dias', 'w'))            # -1
-"""
+print(index('buenos dias', 'w'))            # None
+```
 
-# Ejemplo:
-# Escribir una funcion que permita decidir si un numero es o no primo
-# Una primera version podria ser:
-"""
+### Ejemplo:
+
+Escribir una función que permita decidir si un número es o no primo. Una primera versión podría ser:
+
+```python
 def es_primo_1(n):
-    primo = True            # Flag para cortar el ciclo cuando se encuentre un divisor
-    i = 2                   # Empezando en 2, vamos a buscar divisores
-    while primo and i <= n // 2:  # Puede cortar porque i > n // 2, o porque primo es False
-        if n % i == 0:
-            primo = False
-        i += 1
+    if n <= 1                   # El 1 no es primo
+        primo = False
+    else:
+        primo = True            # Flag para cortar el ciclo cuando se encuentre un divisor
+        i = 2                   # Empezando en 2, vamos a buscar divisores
+        while primo and i <= n // 2:    # Puede cortar porque i > n // 2, o porque primo es False
+            if n % i == 0:
+                primo = False
+            i += 1
     return primo
-"""
-# Mas eficiente: se ha demostrado que, en lugar de buscar divisores hasta la mitad del numero,
-# lo podemos hacer hasta su raiz cuadrada
-"""
+```
+
+Más eficiente: se ha demostrado que, en lugar de buscar divisores hasta la mitad del número, lo podemos hacer hasta su raíz cuadrada.
+
+```python
 def es_primo_2(n):
-    primo = True            # Flag para cortar el ciclo cuando se encuentre un divisor
-    i = 2                   # Empezando en 2, vamos a buscar divisores
-    while primo and i <= int(n ** 0.5):  # Puede cortar porque i > n // 2, o porque primo es False
-        if n % i == 0:
-            primo = False
-        i += 1
+    if n <= 1                   # El 1 no es primo
+        primo = False
+    else:
+        primo = True            # Flag para cortar el ciclo cuando se encuentre un divisor
+        i = 2                   # Empezando en 2, vamos a buscar divisores
+        while primo and i <= int(n ** 0.5):  # Puede cortar porque i > n // 2, o porque primo es False
+            if n % i == 0:
+                primo = False
+            i += 1
     return primo
-"""
+```
+
+Aún más eficiente: Descartar todos los números pares.
+
+```python
+def es_primo_3(n):
+    if n <= 1:              # 1 o menores no son primos
+        primo = False
+    elif n == 2:            # El 2 es primo
+        primo = True
+    elif n % 2 == 0:        # Todo par mayor que 2 es primo
+        primo = False
+    else:
+        primo = True
+        i = 3
+        while primo and i <= int(n ** 0.5):
+            if n % i == 0:
+                primo = False
+            i += 2          # Pruebo solo con los impares
+    return primo
+```

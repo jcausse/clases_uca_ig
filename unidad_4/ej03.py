@@ -14,18 +14,22 @@ def es_primo(num):
     """
     Recibe un numero entero y retorna True si es primo, o False en caso contrario
     """
-    primo = True                        # Supongo que es primo
-    i = 2                               # Inicio i en 2, ya que es el primer numero con el que debo probar
-    while primo and i <= num ** 0.5:    # Pruebo con los numeros entre 2 y la raiz cuadrada de num hasta que encuentre algun divisor o se me acaben los numeros para probar     
-        if num % i == 0:                # Si encuentro un divisor
-            primo = False               # ya no es mas primo
-        i += 1
+    if num <= 1:                            # El 1 no es considerado primo, y no permito cero ni numeros negativos
+        primo = False
+    else:
+        primo = True                        # Supongo que es primo
+        i = 2                               # Inicio i en 2, ya que es el primer numero con el que debo probar
+        while primo and i <= num ** 0.5:    # Pruebo con los numeros entre 2 y la raiz cuadrada de num hasta que encuentre algun divisor o se me acaben los numeros para probar     
+            if num % i == 0:                # Si encuentro un divisor
+                primo = False               # ya no es mas primo
+            i += 1
     return primo
 
 # Oportunidades de mejora (no es la idea del ejercicio, pero se comentan igual):
 # 1. Fijarme primero que num no sea par (si es par, no es primo). Esto me permite, en lugar de fijarme si todos los numeros entre 2 y num ** 0.5 son
 #    divisores, fijarme solamente con los impares entre 3 y num ** 0.5. Ej: si num es 81 solo debiera probar con 3, 5, 7 y 9 en lugar de
 #    2, 3, 4, 5, 6, 7, 8, 9.
+#    Ver implementacion en el ultimo ejemplo en https://github.com/jcausse/clases_uca_ig/blob/main/unidad_4/Teoria/ciclos.md
 # 2. Fijarme que no sea par ni multiplo de 3. Entonces los posibles divisores seran todos de la forma 6k-1 o 6k+1.
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------- #
