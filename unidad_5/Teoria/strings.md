@@ -6,7 +6,7 @@ Un _string_ es un objeto pensado para representar una colección ordenada de car
 
 El soporte para cadenas de caracteres no es algo que introduce Python, sino que ya estaba implementado en lenguajes anteriores (como C, en el cual el intérprete estándar de Python está escrito), pero con ciertas limitaciones.
 
-En C, por ejemplo, las cadenas de caracteres no son un tipo de dato especial (no existe un tipo `str` como en Python), sino que una cadena está conformada por un montón de caracteres contiguos en la memoria y un caracter especial que marca el fin de la cadena. 
+En C, por ejemplo, las cadenas de caracteres no son un tipo de dato especial (no existe un tipo `str` como en Python), sino que una cadena está conformada por un montón de caracteres contiguos en la memoria y un caracter especial (`'\0'`, de valor numérico cero) que marca el fin de la cadena.
 
 Además, el soporte para cadenas de C está (en principio) limitado a la codificación de caracteres [ASCII](https://en.wikipedia.org/wiki/ASCII), que es anterior a la codificación Unicode y muchísimo más limitada (en la cantidad y variedad de caracteres representados), y de la cual Unicode extiende. **El hecho de que Unicode extienda al estándar ASCII quiere decir que agregar nuevos caracteres por sobre los ASCII, pero que la codificación de los caracteres que ASCII ya incluía no cambia, de manera que Unicode sea retrocompatible con ASCII**.
 
@@ -131,8 +131,8 @@ Por otro lado, los operadores de comparacion pueden comparar strings. Para el ca
 
 La comparación que nos interesa a los efectos de conversión es aquella que nos permita decidir si una letra es mayúscula o minúscula. Para ello:
 
-- La expresión `'A' <= c and c <= 'Z'` resulta verdadera solo cuando `c` es una letra mayúscula, y falsa en caso contrario.
-- La expresión `'a' <= c and c <= 'z'` resulta verdadera solo cuando `c` es una letra minúscula, y falsa en caso contrario.
+- La expresión `'A' <= c and c <= 'Z'` resulta verdadera solo cuando `c` es una letra mayúscula, y falsa en caso contrario. [Ver Nota](#nota-importante).
+- La expresión `'a' <= c and c <= 'z'` resulta verdadera solo cuando `c` es una letra minúscula, y falsa en caso contrario. [Ver Nota](#nota-importante).
 
 De esta forma, es posible programar las funciones _booleanas_ `es_mayuscula` y `es_minuscula`, que son muy útiles para los ejercicios:
 
@@ -164,3 +164,7 @@ def a_mayuscula(c):
         c = chr(ord(c) - 32)
     return c
 ```
+
+### Nota importante
+
+> Si bien Python soporta comparación múltiple (de modo que `'A' <= c and c <= 'Z'` es equivalente a `'A' <= c <= 'Z'`), el uso de esta característica está **estrictamente prohibido** por la cátedra de Informática General UCA, y es penalizado con un significativo descuento de puntos en los exámenes.
