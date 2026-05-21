@@ -22,18 +22,34 @@ def es_perfecto(n):
 
     return n == suma_divisores      # La expresion n == suma_divisores produce un valor bool, y se devuelve ese valor
 
+###########################################################
+# Tests (no son parte del main):
+
+# print('Deben dar verdadero:')
+# print(es_perfecto(6))       # True
+# print(es_perfecto(28))      # True
+# print(es_perfecto(496))     # True
+# print(es_perfecto(8128))    # True    
+
+# print('Deben dar falso:')
+# print(es_perfecto(8))       # False
+# print(es_perfecto(495))     # False
+# print(es_perfecto(497))     # False
+# print(es_perfecto(9000))    # False
+###########################################################
+
+# Programa que encuentra los primeros 4 numeros perfectos
 
 def main():
-    print('Deben dar verdadero:')
-    print(es_perfecto(6))       # True
-    print(es_perfecto(28))      # True
-    print(es_perfecto(496))     # True
-    print(es_perfecto(8128))    # True    
-
-    print('Deben dar falso:')
-    print(es_perfecto(8))       # False
-    print(es_perfecto(495))     # False
-    print(es_perfecto(497))     # False
-    print(es_perfecto(9000))    # False
-
+    contador = 0                # Cantidad de perfectos impresos hasta ahora
+    i = 2                       # El numero con el que voy probando (el 1 no es perfecto por definicion)
+    
+    print('Primeros 4 numeros perfectos:')
+    while contador < 4:
+        if es_perfecto(i):      # Si encuentro uno perfecto
+            print(i)            # Lo imprimo
+            contador += 1       # Anoto que ya tuve 1 perfecto mas
+        
+        i += 1                  # Incremento el numero para probar con el siguiente
+    
 main()
