@@ -63,6 +63,8 @@ def principioFin(texto):
             ultima_palabra = palabra_actual         # Guardo la palabra actual en ultima_palabra
             palabra_actual = ''                     # Reinicio la palabra actual
 
+    if primera_palabra == '':                       # Caso borde: si la primera palabra es vacia, la frase puede ser de una sola palabra que actua como primera
+        primera_palabra = palabra_actual            # y como ultima, entonces guardo la palabra actual como primera
     if palabra_actual != '':                        # Caso borde: si el ultimo caracter es una letra, no se copiaba la palabra_actual a ultima_palabra
         ultima_palabra = palabra_actual             # Entonces lo hago a mano
     
@@ -72,7 +74,7 @@ def principioFin(texto):
     return primera_palabra == ultima_palabra        # Si las palabras son iguales, el == da True y devuelve True. Sino, devuelve False
 
 def main():
-    res = principioFin("Hombre de poca fe, he dicho! Vamos, vamos hombre!")
-    print(res)
+    texto = int(input('Ingrese texto: '))
+    print(principioFin(texto))
 
 main()
