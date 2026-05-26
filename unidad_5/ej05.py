@@ -32,7 +32,7 @@ def ingresar_texto():
     return res
 
 def rotacion(texto):
-    primeraMitad = texto[: len(texto) // 2]     # Recordar teoria de slices (ver Unidad 5 -> Teoria -> slices_indices.py)
+    primeraMitad = texto[: len(texto) // 2]     # Recordar teoria de slices (ver Unidad 5 -> Teoria -> 3_slices_indices.md)
     segundaMitad = texto[len(texto) // 2 :]
     return segundaMitad + primeraMitad
 
