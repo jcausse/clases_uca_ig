@@ -11,7 +11,7 @@
 # Es uno de los algoritmos de ordenamiento más sencillos (pero más ineficientes) entre los más estudiados.
 
 # El algoritmo trabaja con una serie de "pasadas", en cada una de las cuales el número mayor (en principio) "asciende"
-# (como una burbuja en un vaso de gaseosa) hacia el final de la lista.
+# (como una burbuja en un vaso de gaseosa, y de ahí su nombre) hacia el final de la lista.
 
 # La idea básica de cada pasada es recorrer desde el principio hasta el fin, tomando los elementos de a dos (siempre uno y su 
 # posterior), e intercambiándolos (swap), de ser necesario, para lograr que los elementos mayores siempre queden a la derecha.
