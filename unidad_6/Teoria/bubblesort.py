@@ -2,6 +2,8 @@
 
 # ANIMACION:
 # https://www.youtube.com/watch?v=9I2oOAr2okY
+# Nota: La mano izquierda que dice "i" en la animacion es "j" en el algoritmo de mas abajo, y la mano derecha que dice
+#       "j" es "j + 1" en nuestro algoritmo
 
 
 ########################################################
