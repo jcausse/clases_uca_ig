@@ -18,7 +18,7 @@ Para solicitar clases, podés contactarme via [mail](mailto:juanignaciocausse@gm
 * [**Unidad 6:**](https://github.com/jcausse/clases_uca_ig/tree/main/unidad_6) Colecciones.
 * [**Unidad 7:**](https://github.com/jcausse/clases_uca_ig/tree/main/unidad_7) Archivos.
 * [**Info:**](https://github.com/jcausse/clases_uca_ig/tree/main/info) Carpeta donde encontrarán distinta información relevante sobre la materia, así como algunos apuntes útiles.
-* [**Ejercicios Extra:**](https://github.com/jcausse/clases_uca_ig/tree/main/ejercicios_extra) Carpeta donde encontrarán algunos ejercicios extra diseñados por mí, adicionales a los de las guías de ejercicios. Se sube un archivo `.py` por ejercicio. Dentro, al principio del archivo, están los enunciados en forma de comentarios.
+* [**Ejercicios Extra:**](https://github.com/jcausse/clases_uca_ig/tree/main/ejercicios_extra) Carpeta donde encontrarán algunos ejercicios extra diseñados por mí, adicionales a los de las guías de ejercicios. Se sube un archivo `.py` por ejercicio. Dentro, al principio cada archivo, están los enunciados en forma de comentarios.
 
 # Disclaimer
 Por favor leer:
