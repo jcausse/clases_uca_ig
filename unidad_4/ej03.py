@@ -10,27 +10,34 @@ listado con los primeros cant números primos. Ambos listados se deben imprimir 
 pantalla a 10 columnas
 """
 
-def es_primo(num):
-    """
-    Recibe un numero entero y retorna True si es primo, o False en caso contrario
-    """
-    if num <= 1:                            # El 1 no es considerado primo, y no permito cero ni numeros negativos
-        primo = False
+def es_primo(n):
+    # Casos particulares:
+    if n < 2:           # Los negativos, el 0 y el 1 no son primos
+        ret = False
+    elif n == 2:        # El 2 es primo
+        ret = True
+    elif n % 2 == 0:    # Ningun par que sea > 2 es primo porque es
+        ret = False     # divisible por 2
+    
+    # Caso general: Todos los numeros primos > 2 son impares. Este caso
+    # solo trabaja con impares 
     else:
-        primo = True                        # Supongo que es primo
-        i = 2                               # Inicio i en 2, ya que es el primer numero con el que debo probar
-        while primo and i <= num ** 0.5:    # Pruebo con los numeros entre 2 y la raiz cuadrada de num hasta que encuentre algun divisor o se me acaben los numeros para probar     
-            if num % i == 0:                # Si encuentro un divisor
-                primo = False               # ya no es mas primo
-            i += 1
-    return primo
+        ret = True                          # Chequeo optimista: ASUMO que es primo, y luego verifico que lo sea
+        posible_divisor = 3                 # Empiezo a probar desde el 3
 
-# Oportunidades de mejora (no es la idea del ejercicio, pero se comentan igual):
-# 1. Fijarme primero que num no sea par (si es par, no es primo). Esto me permite, en lugar de fijarme si todos los numeros entre 2 y num ** 0.5 son
-#    divisores, fijarme solamente con los impares entre 3 y num ** 0.5. Ej: si num es 81 solo debiera probar con 3, 5, 7 y 9 en lugar de
-#    2, 3, 4, 5, 6, 7, 8, 9.
-#    Ver implementacion en el ultimo ejemplo en https://github.com/jcausse/clases_uca_ig/blob/main/unidad_4/Teoria/ciclos.md
-# 2. Fijarme que no sea par ni multiplo de 3. Entonces los posibles divisores seran todos de la forma 6k-1 o 6k+1.
+        # Mientras no me pase de la raiz cuadrada del numero y no me haya dado 
+        # previamente que no es primo (ret no debe ser False)
+        while posible_divisor < n ** (1/2) and ret == True:
+            print('Probando con', posible_divisor, '...')
+            if n % posible_divisor == 0:    # Si efectivamente n es divisible por el numero que pruebo
+                ret = False                 # Entonces no es primo
+                print('----> No es primo!')
+            posible_divisor += 2            # Pruebo con el proximo impar
+
+    return ret
+
+# Oportunidad de mejora (opcional):
+# 1. Fijarme que no sea par ni multiplo de 3. Entonces los posibles divisores seran todos de la forma 6k-1 o 6k+1.
 
 # ------------------------------------------------------------------------------------------------------------------------------------------------- #
 
