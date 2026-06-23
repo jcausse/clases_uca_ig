@@ -27,6 +27,7 @@
     - [Por Índices](#por-índices)
   - [Operador de membresía](#operador-de-membresía)
     - [Ejemplo](#ejemplo-3)
+    - [Caso de uso: eliminar todas las apariciones de un elemento](#caso-de-uso-eliminar-todas-las-apariciones-de-un-elemento)
 
 ## Concepto
 
@@ -456,4 +457,39 @@ print('uva' in l)       # Imprime False porque 'uva' no esta en l
 
 print('banana' not in l)# False (es falso que 'banana' no esta en l)
 print('uva' not in l)   # True (es cierto que 'uva' no esta en l)
+```
+
+### Caso de uso: eliminar todas las apariciones de un elemento
+
+Suponer que se tiene una lista como la siguiente:
+
+```python
+l = ['a', 'b', 'b', 'b', 'c', 'b', 'd', 'e', 'b', 'f', 'b']
+```
+
+Al utilizar `remove` para un elemento, se elimina siempre la primera aparición del elemento. Si el elemento no aparece en la lista, `remove` genera un error `ValueError` que aborta el programa.
+
+Para poder eliminar un elemento de forma segura, primero se debe verificar que exista dentro de la lista, usando el operador de membresía, `in`:
+
+```python
+if <elemento> in <lista>:
+    <lista>.remove(<elemento>)
+```
+
+Esto puede generalizarse con un ciclo para que elimine de forma segura todas las apariciones del elemento, de la siguiente forma:
+
+```python
+while <elemento> in <lista>:
+    <lista>.remove(<elemento>)
+```
+
+Por ejemplo, para eliminar todas las letras `'b'` de la lista `l` anterior:
+
+```python
+l = ['a', 'b', 'b', 'b', 'c', 'b', 'd', 'e', 'b', 'f', 'b']
+
+while 'b' in l:
+    l.remove('b')
+
+print(l)    # Imprime ['a', 'c', 'd', 'e', 'f']
 ```
