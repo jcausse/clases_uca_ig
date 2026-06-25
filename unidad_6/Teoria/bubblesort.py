@@ -233,7 +233,7 @@ def bubblesort(lst):
             
             if lst[j] > lst[j + 1]:
                 
-                print('+-----> Intercambio!')
+                print('+-----> Intercambio! Lista:', lst)
                 
                 aux = lst[j]
                 lst[j] = lst[j + 1]
