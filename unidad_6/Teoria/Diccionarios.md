@@ -348,7 +348,7 @@ Se cuenta con la siguiente lista que muestra el equipo que resultó ganador en c
 ganadores = ['Rojo', 'Azul', 'Rojo', 'Verde', 'Verde', 'Verde', 'Azul', 'Verde', 'Rojo']
 ```
 
-El siguiente código cuenta la cantidad de victorias por cada equipo, usando un dicionario. Las claves del diccionario son los nombre de los equipos (y cada uno aparece una única vez). El valor asociado a cada clave es una variable de tipo `int` que conforma un contador. Los contadores inician en cero y se van incrementando a medida que se van encontrando victorias para ese equipo en la lista.
+El siguiente código cuenta la cantidad de victorias por cada equipo, usando un dicionario. Las claves del diccionario son los nombre de los equipos (y cada uno aparece una única vez). El valor asociado a cada clave es una variable de tipo `int` que conforma un contador. Los contadores inician en 1 al encontrarse por primera vez cada equipo en la lista, y se van incrementando a medida que se van encontrando victorias para ese equipo en la lista.
 
 ```python
 contadores = {}
